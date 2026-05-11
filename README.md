@@ -1,6 +1,6 @@
 # raijin
 
-Configuración de Neovim dibangun dengan lazy.nvim.
+Configuración de Neovim dibangun dengan lazy.nvim..
 
 ## Instalación
 
