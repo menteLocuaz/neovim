@@ -95,6 +95,7 @@ return {
 			"emmet_ls",
 			"prismals",
 			"pyright",
+			"phpantom",
 		}
 
 		for _, name in ipairs(servers) do
