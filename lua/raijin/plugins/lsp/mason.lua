@@ -49,6 +49,8 @@ return {
 				"black", -- python formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter
+				"php-cs-fixer", -- php formatter
+				"phpstan", -- php linter
 			},
 		})
 	end,
