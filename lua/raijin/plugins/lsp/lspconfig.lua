@@ -70,19 +70,25 @@ return {
 				},
 			},
 
-			lua_ls = {
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
-						},
-						completion = {
-							callSnippet = "Replace",
-						},
+		lua_ls = {
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
+					completion = {
+						callSnippet = "Replace",
 					},
 				},
 			},
-		}
+		},
+
+		phpantom = {
+			cmd = { "phpantom_lsp" },
+			filetypes = { "php" },
+			root_markers = { "composer.json", ".git" },
+		},
+	}
 
 		local servers = {
 			"ts_ls",
