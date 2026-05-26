@@ -9,6 +9,7 @@ return {
 	},
 
 	config = function()
+		local servers = require("raijin.servers")
 		local keymap = vim.keymap.set
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -89,20 +90,6 @@ return {
 			root_markers = { "composer.json", ".git" },
 		},
 	}
-
-		local servers = {
-			"ts_ls",
-			"html",
-			"cssls",
-			"tailwindcss",
-			"svelte",
-			"lua_ls",
-			"graphql",
-			"emmet_ls",
-			"prismals",
-			"pyright",
-			"phpantom",
-		}
 
 		for _, name in ipairs(servers) do
 			local cfg = server_configs[name] or {}
