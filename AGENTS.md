@@ -7,6 +7,7 @@
 - `lua/raijin/core/` — options and keymaps
 - `lua/raijin/plugins/` — plugin configs (lazy.nvim spec format)
 - `lua/raijin/plugins/lsp/` — LSP-related plugins
+- `lua/raijin/servers.lua` — shared LSP server list
 
 ## Keymaps
 
@@ -21,18 +22,18 @@ Leader key: `<Space>`
 | `<leader>se` | Equalize splits |
 | `<leader>sx` | Close split |
 | `<leader>to/tx/tn/tp/tf` | Tab management |
-| `gR` | LSP references (Telescope) |
+| `<leader>ff` | Find files (Telescope) |
+| `<leader>fr` | Recent files (Telescope) |
+| `<leader>fs` | Live grep (Telescope) |
+| `K` | Hover docs |
+| `gd` | LSP definition |
 | `gD` | LSP declaration |
-| `gd` | LSP definitions (Telescope) |
-| `gi` | LSP implementations |
-| `gt` | LSP type definitions |
-| `<leader>ca` | Code actions |
+| `gi` | LSP implementation |
+| `gr` | LSP references |
+| `<leader>ca` | Code action |
 | `<leader>rn` | Smart rename |
-| `<leader>D` | Buffer diagnostics (Telescope) |
 | `<leader>d` | Line diagnostics |
 | `[d` / `]d` | Prev/next diagnostic |
-| `K` | Hover docs |
-| `<leader>rs` | Restart LSP |
 | `<leader>mp` | Format file/range |
 | `<leader>l` | Trigger lint |
 
@@ -49,7 +50,7 @@ Formatting and linting run on save.
 
 ## LSP Servers (mason.nvim)
 
-Auto-installed: `ts_ls`, `html`, `cssls`, `tailwindcss`, `svelte`, `lua_ls`, `graphql`, `emmet_ls`, `prismals`, `pyright`
+Auto-installed: `ts_ls`, `html`, `cssls`, `tailwindcss`, `svelte`, `lua_ls`, `graphql`, `emmet_ls`, `prismals`, `pyright`, `phpantom`
 
 Lua LSP diagnostic globals include `vim`.
 
