@@ -5,15 +5,20 @@ return {
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
+    local function hl(name, attr)
+      local val = vim.api.nvim_get_hl(0, { name = name })[attr]
+      return val and string.format("#%06x", val) or nil
+    end
+
     local colors = {
-      blue = "#65D1FF",
-      green = "#3EFFDC",
-      violet = "#FF61EF",
-      yellow = "#FFDA7B",
-      red = "#FF4A4A",
-      fg = "#c3ccdc",
-      bg = "#112638",
-      inactive_bg = "#2c3043",
+      blue = hl("Function", "fg") or "#65D1FF",
+      green = hl("String", "fg") or "#3EFFDC",
+      violet = hl("Keyword", "fg") or "#FF61EF",
+      yellow = hl("Type", "fg") or "#FFDA7B",
+      red = hl("Error", "fg") or "#FF4A4A",
+      fg = hl("Normal", "fg") or "#c3ccdc",
+      bg = hl("Normal", "bg") or "#112638",
+      inactive_bg = hl("StatusLineNC", "bg") or "#2c3043",
     }
 
     local my_lualine_theme = {
