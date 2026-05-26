@@ -1,5 +1,5 @@
 return {
-	"menteLocuaz/ghostgit.nvim",
+	"menteLocuaz/spectregit.nvim",
 	-- Añadimos todos los comandos para que lazy-loading funcione siempre
 	cmd = {
 		"G",
